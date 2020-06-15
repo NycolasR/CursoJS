@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1 id="nacionalidade">
+        Nacionalidade
+    </h1>
+    <p>Informe sua nacionalidade:</p>
+    <input type="text" name="txtnasc" id="txtnasc">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="welcome"></p>
+    <script>
+        function verificar() {
+            var texto = window.document.querySelector('input#txtnasc').value
+            var w = document.getElementById('welcome')
+            if(texto == 'Brasileiro'){
+                w.innerHTML += '<p>Você é BRASILEIRO.</p>'
+            } else {
+                w.innerHTML += '<p>Você é ESTRANGEIRO.</p>'
+            }
+        }
+    </script>
+</body>
+</html>
